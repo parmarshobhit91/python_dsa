@@ -1,5 +1,6 @@
 import numpy as np
 
+# create a 1D array
 a = np.array([1, 2, 3, 4, 5])
 print(a)
 
@@ -31,7 +32,7 @@ for i in range(len(a)):
             a[j] = temp
 print(a)
 
-# min and max using sort function
+# second smallest and second largest using sort function
 sort_array = np.sort(a)
 print(sort_array[1])
 print(sort_array[-2])
@@ -50,6 +51,7 @@ for i in range(len(a)):
         temp = a[i]
 print(temp)
 
+# sort without using inbuilt function
 array_1 = np.array([1, 0, 0, 1, 0, 1])
 for i in range(len(array_1)):
     for j in range(i + 1, len(array_1)):
