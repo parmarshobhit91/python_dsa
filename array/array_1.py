@@ -1,5 +1,13 @@
 import numpy as np
 
+# BASIC ARRAY OPERATIONS AND TYPES OF ARRAYS
+# 1D ARRAY
+# 2D ARRAY
+# shape, len, type, indexing, slicing
+# add, subtract, multiply, divide, mod, power
+
+
+
 a = np.array([1, 2, 3, 4, 5])
 # print(a)
 
