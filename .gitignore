@@ -1,0 +1,12 @@
+# Python virtual environment
+bin/
+lib/
+include/
+pyvenv.cfg
+
+# IDE and cache files
+.idea/
+.mypy_cache/
+
+# OS files
+.DS_Store
