@@ -54,7 +54,7 @@ arr2 = np.array([[1, 2, 3], [4, 5, 6]])
 # print(np.max(a))
 # print(np.max(arr1))
 # print(np.min(a))
-print(np.min(arr1))
+# print(np.min(arr1))
 
 # print(np.cumsum(a))
 # print(np.cumsum(arr1))
