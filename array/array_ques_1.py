@@ -20,7 +20,11 @@ print(np.max(a) * np.min(a))
 print(np.max(a) + np.min(a))
 
 # sort the array
-# print(np.sort(a))
+print(np.sort(a))
+
+b = np.array([20, 30, 10, 50, 40])
+c = sorted(b)
+print(c)
 
 # sort the array without using inbuilt function
 for i in range(len(a)):
@@ -60,3 +64,33 @@ for i in range(len(array_1)):
             array_1[i] = array_1[j]
             array_1[j] = temp
 print(array_1)
+
+# largest and smallest without using sort function
+largest = a[0]
+smallest = a[0]
+for i in range(len(a)):
+    if a[i] > largest:
+        largest = a[i]
+    if a[i] < smallest:
+        smallest = a[i]
+print(largest)
+print(smallest) 
+
+# second largest and second smallest without using sort function
+largest = a[0]
+second_largest = -999999
+smallest = a[0]
+second_smallest = 999999
+for i in range(len(a)):
+    if a[i] > largest:
+        second_largest = largest
+        largest = a[i]
+    elif a[i] > second_largest and a[i] != largest:
+        second_largest = a[i]
+    if a[i] < smallest:
+        second_smallest = smallest
+        smallest = a[i]
+    elif a[i] < second_smallest and a[i] != smallest:
+        second_smallest = a[i]
+print(second_largest)
+print(second_smallest) 
