@@ -43,10 +43,13 @@ class DLL:
         self.start.next.prev = None
 
     def delete_at_end(self):
-        if self.start == None:
+        if self.start == None:  # Empty list check
             print("List is empty.")
             return
-        temp = self.start.next
+        if self.start.next == None:  # If there is only one node in the list
+            self.start = None
+            return
+        temp = self.start
         while temp.next.next != None:
             temp = temp.next
         temp.next = None
@@ -56,11 +59,38 @@ class DLL:
         value = int(input("Enter a value you want to search in the list : "))
         while temp != None:
             if temp.data == value:
-                print("Element exits")
+                print("Element exists")
                 return
             temp = temp.next
         print("Element does not exist")
 
+    def insert_at_any_index(self):
+        temp = self.start
+        value = int(input("Enter a value of element after you want to insert the element in the list : "))
+        value2 = int(input("Enter the value of new node : "))
+        while temp != None:
+            if temp.data == value:
+                new_node = Node(value2)
+                new_node.prev = temp
+                new_node.next = temp.next
+                temp.next = new_node
+            
+                if temp.next != None: # If the new node is not being inserted at the end
+                    temp.next.prev = new_node
+
+                temp.next = new_node
+                return
+            temp = temp.next
+                   
+    def delete_at_any_index(self):
+        temp = self.start
+        value = int(input("Enter a value you want to delete : "))
+        while temp != None:
+            if temp.data == value:
+                temp.next.prev = temp.prev
+                temp.prev.next = temp.next
+                return
+            temp = temp.next
 
 n1 = Node(100)
 n2 = Node(200)
@@ -93,5 +123,10 @@ obj1 = DLL(n1)
 
 # obj1.delete_at_start()
 # obj1.delete_at_end()
-obj1.search()
+# obj1.search()
 # obj1.display()
+
+
+# obj1.insert_at_any_index()
+obj1.delete_at_any_index()
+obj1.display()
