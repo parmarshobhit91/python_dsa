@@ -10,3 +10,6 @@ pyvenv.cfg
 
 # OS files
 .DS_Store
+
+# Extra python demo file
+demio.py
