@@ -64,3 +64,30 @@ def sum_of_n_odd_numbers(n):
         return 1
     return (2*n)-1 + sum_of_n_odd_numbers(n-1)
 # print(sum_of_n_odd_numbers(10))
+
+def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    if n > 1:
+        return fibonacci(n-1)+fibonacci(n-2)
+# print(fibonacci(5))
+
+def decimal_to_binary(n):
+    if n > 0:
+        decimal_to_binary(n//2)
+        print(n%2, end='')
+# decimal_to_binary(6)
+
+def decimal_to_octal(n):
+    if n > 0:
+        decimal_to_octal(n//8)
+        print(n%8, end='')
+# decimal_to_octal(65)
+
+def reverse_number(n):
+    if n>0:
+        print(n%10, end='')
+        reverse_number(n//10)
+reverse_number(12)
