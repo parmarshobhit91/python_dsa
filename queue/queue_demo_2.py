@@ -6,26 +6,29 @@ class Node:
 class Queue:
     def __init__(self):
         self.front = None
+        self.rear = None
         self.size = 0
 
     def enqueue(self, element):
         new_node = Node(element)
-        if self.front == None:
-            self.front = new_node
+        if self.rear is None:
+            self.front = self.rear = new_node
             self.size += 1
             return
-        temp = self.front
-        while temp.next is not None:
-            temp = temp.next
-        temp.next = new_node
+        self.rear.next = new_node
+        self.rear = new_node
         self.size += 1
 
     def dequeue(self):
-        if self.front == None:
+        if self.size == 0:
             print("Queue is empty, Deletion not possible")
             return
-        self.front = self.front.next
+        temp = self.front
+        self.front = temp.next
         self.size -= 1
+        if self.front is None:
+            self.rear = None
+        return temp.data 
 
     def display(self):
         temp = self.front
@@ -38,7 +41,7 @@ class Queue:
         return self.front.data
     
     def isEmpty(self):
-        if self.front == None:
+        if self.size == 0:
             return True
         return False
 
