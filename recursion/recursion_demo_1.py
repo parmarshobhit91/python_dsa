@@ -90,4 +90,30 @@ def reverse_number(n):
     if n>0:
         print(n%10, end='')
         reverse_number(n//10)
-reverse_number(12)
+# reverse_number(12)
+
+def reverse_string(n: str):
+    a = len(n) - 1
+    if a >= 0:
+        print(n[a], end="")
+        reverse_string(n[0:a])
+# reverse_string("abcdef")
+
+def palindrome(n: str):
+   if len(n) < 2:
+       return True
+   if n[0].lower() != n[-1].lower():
+       return False
+   return palindrome(n[1:-1])
+       
+# a = palindrome("Civic")
+# print(a)
+
+def power(b, pow):
+    res = 1
+    if pow == 0:
+        return 1
+    return b * power(b, pow-1)
+
+# a = power(2,4)
+# print(a)
