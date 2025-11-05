@@ -1,0 +1,59 @@
+GRAPHS 
+Graphs consist of two things. A set of V(vertex) of elements called nodes.
+and A set of e of edges such that each edge e in E is identified with a unique 
+(unordered) pair[u, v] of nodes in V, denoted by e = [u,v]
+
+v indicates parts of graph writing G = (V, E)
+
+ADJACENT nodes
+If e = [u, v], then u and v are called adjacent nodes or neighbour.
+
+diagram - 
+                        e
+                u_____________________v
+        where u and v are adjacent nodes/vertex and e is edge
+
+
+DEGREE OF NODE
+The degree of node u written as deg(u), is the number of edges containing u.
+If deg(u) = 0, then the node is isolated node
+
+PATH
+A path of length l from a node u to a node v is defined as sequence of n+1 node.
+
+A path is said to be closed if first node/vertex and last node/vertex are same.
+
+SIMPLE AND COMPLEX PATH
+A path is said to be simple if all the nodes are distinct with the exception that v0 may equal to vn otherwise
+it is a complex path.
+
+
+CONNECTED GRAPH
+A graph is said to be connected if there is a path between any of its two nodes.
+
+TREE GRAPH
+A connected graph T without any cycles is called tree graph or free tree or simply a tree.
+This means in particular that there is a unique simple path p between any two nodes u and v.
+
+MULTI GRAPH
+A multi graph is a graph consist of multiple edges and loop.
+
+LABELLED GRAPH
+A graph is to be labelled if its edges are assigned data.
+
+WEIGHTED GRAPH
+A graph G is said to be weighted if each edge e in graph G is assigned a non negative numerical value W(e) called weight
+or length of edge.
+
+MULTIPLE EDGES
+A distinct edges e and f are called multiple edges if they connect the same end point i.e., if e = [u, v] and f =[u, v]
+
+LOOP
+An edge is called loop if it has identical end points.
+
+DIRECT GRAPHS
+A directed graph G is also called diagraph is same as multi graph except that each edge is assigned a direction.
+
+COMPLETE GRAPH
+A simple graph in which there exist an edge between every pair of vertices is called complete graph. It is also known as
+Universal graph.
